@@ -1,12 +1,12 @@
-# Systolic Array Accelerator Simulator
+# Systolic Array Accelerator Simulator Course Project DAL-522
 
-## Overview
+## Overview:
 
 A cycle-accurate software simulator of a systolic array that models matrix
 multiplication through a 2-D PE grid, including memory bandwidth constraints
 and three dataflow strategies (WS, OS, RS).
 
-## Requirements
+## Requirements:
 
 - **Python 3.10+**
 - **NumPy** (the only external dependency)
@@ -15,23 +15,23 @@ and three dataflow strategies (WS, OS, RS).
 pip install numpy
 ```
 
-## Files
+## File Structure:
 
 | File | Purpose |
 |---|---|
 | `systolic_sim.py` | Core simulator – the single module imported by the autograder. |
-| `run_all.py` | Driver that generates `results.json` for Levels 4–5. |
+| `run_all.py` | Driver that generates results <`results.json`> for Levels 4–5. |
 | `results.json` | Generated numeric answers (created by `run_all.py`). |
 | `README.md` | This file. |
 
-## Quick Start
+## Quick Start:
 
 ```bash
 # Generate results.json
 python run_all.py
 ```
 
-## API Usage
+## API Usage:
 
 ```python
 import numpy as np
@@ -52,7 +52,7 @@ print(f"Cycles: {cycles}, Utilization: {utilization:.4f}")
 print(f"SRAM reads: {mem_stats['sram_reads']}, writes: {mem_stats['sram_writes']}")
 ```
 
-## Supported Dataflows
+## Supported Dataflows:
 
 - **WS (Weight-Stationary):** B-tile stays in the array while A-tiles stream through.
 - **OS (Output-Stationary):** No operand reuse; both tiles are re-fetched each time.
