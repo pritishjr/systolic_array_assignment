@@ -9,7 +9,7 @@ import sys
 import math
 import numpy as np
 
-from systolic_sim import SystolicSimulator
+from deliverables.systolic_sim import SystolicSimulator
 
 PASS = 0
 FAIL = 0
